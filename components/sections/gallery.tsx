@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { createPortal } from 'react-dom'
 import { X } from 'lucide-react'
 
 const filters = ['All', 'Screen', 'Editorial', 'Traditional', 'Fashion', 'Lifestyle', 'BTS']
@@ -83,6 +84,7 @@ export function GallerySection() {
   const [selectedFilter, setSelectedFilter] = useState('All')
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT)
+  const [isMounted, setIsMounted] = useState(false)
   const closeButtonRef = useRef<HTMLButtonElement | null>(null)
   const lastFocusedElement = useRef<HTMLElement | null>(null)
 
@@ -98,6 +100,10 @@ export function GallerySection() {
     setSelectedImage(null)
     window.requestAnimationFrame(() => lastFocusedElement.current?.focus())
   }
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   useEffect(() => {
     setVisibleCount(INITIAL_VISIBLE_COUNT)
@@ -199,9 +205,9 @@ export function GallerySection() {
           </div>
         )}
 
-        {selected && (
+        {isMounted && selected && createPortal(
           <div
-            className="fixed inset-0 bg-[#171515]/90 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-[#171515]/90 z-50 flex items-center justify-center p-4 sm:p-6"
             role="dialog"
             aria-modal="true"
             aria-label={selected.title}
@@ -210,21 +216,22 @@ export function GallerySection() {
               if (event.target === event.currentTarget) closeModal()
             }}
           >
-            <div className="relative w-full max-w-5xl">
+            <div className="relative flex h-[calc(100vh-5rem)] w-full max-w-6xl items-center justify-center">
               <button
                 ref={closeButtonRef}
                 type="button"
                 onClick={closeModal}
-                className="absolute -top-12 right-0 inline-flex h-10 w-10 items-center justify-center text-white hover:text-secondary transition"
+                className="absolute right-0 top-0 z-10 inline-flex h-11 w-11 items-center justify-center bg-[#171515]/70 text-white backdrop-blur hover:text-secondary transition"
                 aria-label="Close gallery image"
               >
                 <X size={30} />
               </button>
-              <div className="relative aspect-[4/5] max-h-[82vh] overflow-hidden rounded-[8px] bg-muted">
-                <Image src={selected.image} alt={selected.title} fill sizes="90vw" className="object-contain" />
+              <div className="relative h-full w-full overflow-hidden rounded-[8px]">
+                <Image src={selected.image} alt={selected.title} fill sizes="96vw" className="object-contain" />
               </div>
             </div>
-          </div>
+          </div>,
+          document.body
         )}
       </div>
     </section>
