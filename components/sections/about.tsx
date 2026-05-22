@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const identityTags = ['Actor', 'Entrepreneur', 'Fashion Founder', 'Digital Creator']
+const identityTags = ['Actress', 'Entrepreneur', 'Founder', 'Digital Creator']
 
 export function AboutSection() {
   return (
@@ -20,17 +20,14 @@ export function AboutSection() {
             <div>
               <p className="font-sans text-sm font-medium text-secondary uppercase mb-4">About Aneesha</p>
               <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6">
-                A public profile across television, fashion, lifestyle, and founder-led work.
+                Television presence, editorial style, and founder-led ventures.
               </h2>
               <div className="w-12 h-1 bg-primary" />
             </div>
 
             <div className="space-y-6">
               <p className="font-sans text-lg text-muted-foreground leading-relaxed">
-                Aneesha Altaf is a Pakistani actress and entrepreneur with a public presence across television, fashion, lifestyle, and digital content. Alongside her acting work, she is associated with founder-led fashion ventures including 4th Dimension Clothing and Minaash Official.
-              </p>
-              <p className="font-sans text-lg text-muted-foreground leading-relaxed">
-                This concept positions her as a screen artist, fashion and lifestyle personality, brand collaborator, and founder. Final publication should use approved biography, imagery, project credits, and official booking details.
+                Aneesha Altaf is a Pakistani actress and entrepreneur with a public presence across television, fashion, lifestyle, and digital content. Alongside her screen work, she is the founder of 4th Dimension Clothing and Minaash Official.
               </p>
             </div>
 

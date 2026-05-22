@@ -17,7 +17,7 @@ export function HeroSection() {
                 Aneesha Altaf
               </h1>
               <p className="font-sans text-xl sm:text-2xl text-primary">
-                Actor &bull; Entrepreneur &bull; Fashion Founder
+                Actress &bull; Entrepreneur &bull; Founder
               </p>
               <p className="font-sans text-lg text-muted-foreground leading-relaxed max-w-xl">
                 A screen and fashion personality bringing together television performance, editorial style, and founder-led creative ventures.
@@ -51,7 +51,7 @@ export function HeroSection() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#171515]/70 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
-              <p className="text-sm uppercase text-white/75">Portfolio Concept</p>
+              <p className="text-sm uppercase text-white/75">Actress &bull; Entrepreneur &bull; Founder</p>
               <p className="mt-2 max-w-sm text-2xl font-serif leading-tight">
                 Screen artist, founder, and fashion-lifestyle collaborator.
               </p>

@@ -8,6 +8,7 @@ export function Footer() {
     { label: 'Screen Work', href: '#screen-work' },
     { label: 'Gallery', href: '#gallery' },
     { label: 'Ventures', href: '#ventures' },
+    { label: 'Media', href: '#media' },
     { label: 'Contact', href: '#contact' },
   ]
 
@@ -18,7 +19,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="#" className="font-serif text-3xl font-bold text-secondary">Aneesha Altaf</Link>
             <p className="font-sans text-card/80 leading-relaxed max-w-md">
-              Actor, entrepreneur, fashion founder, and lifestyle collaborator. Portfolio ready for approved launch details and official contact information.
+              Portfolio proposal prepared for review. Final content, imagery, contact details, and brand information can be updated upon approval.
             </p>
           </div>
 
@@ -47,7 +48,7 @@ export function Footer() {
         <div className="border-t border-card/20 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-sans text-sm text-card/70">
-              Copyright {currentYear} Aneesha Altaf. Portfolio concept.
+              Copyright {currentYear} Aneesha Altaf. Portfolio proposal.
             </p>
             <a
               href="#"

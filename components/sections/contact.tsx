@@ -49,7 +49,7 @@ export function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-16">
           <div className="space-y-8">
             <p className="font-sans text-lg text-muted-foreground leading-relaxed">
-              Use this area for casting, brand collaborations, editorial bookings, and founder-led venture opportunities. Replace placeholders with official booking details before publishing.
+              For casting, brand collaborations, editorial bookings, and business inquiries.
             </p>
 
             <div className="space-y-5">
@@ -137,7 +137,7 @@ export function ContactSection() {
               className="w-full inline-flex items-center justify-center gap-2 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition font-medium disabled:cursor-not-allowed disabled:bg-muted disabled:text-muted-foreground"
             >
               <Send size={18} />
-              {bookingEmail ? 'Send Inquiry' : 'Booking Opens Soon'}
+              {bookingEmail ? 'Send Inquiry' : 'Contact Setup Pending Approval'}
             </button>
           </form>
         </div>
